@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    
+<table>
+    <thead>
+        <tr>
+            <th>Start Date</th>
+            <th>Contract Length</th>
+            <th>Shift Type</th>
+            <th>Shift Time</th>
+            <th>Facility Name</th>
+            <th>Location</th>
+            <th>Pay Rate</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for contract in contracts %}
+        <tr>
+            <td>{{ contract[1] }}</td>
+            <td>{{ contract[2] }}</td>
+            <td>{{ contract[3] }}</td>
+            <td>{{ contract[4] }}</td>
+            <td>{{ contract[5] }}</td>
+            <td>{{ contract[6] }}</td>
+            <td>{{ contract[7] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
